@@ -30,7 +30,7 @@ async function getMunicipios(uf){
 function adicionarMunicipios(){
    let municipios = [];
 
-   localStorage.setItem("municipios", municipios);
+   localStorage.setItem("favoritos", municipios);
 
    municipios = JSON.parse(localStorage.getItem("municipios")) || [];
    const button = document.getElementsByClassName('button');
