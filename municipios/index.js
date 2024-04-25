@@ -3,7 +3,6 @@ async function getMunicipios(uf){
     try{
         const municipios = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`);
         const jsonMunicipios = await municipios.json();
-        console.log(jsonMunicipios);
         const main = document.getElementById('main');
         const ul = document.createElement('ul');
         main.append(ul);
@@ -29,9 +28,7 @@ async function getMunicipios(uf){
 
 function adicionarMunicipios(){
    let municipios = [];
-
    localStorage.setItem("favoritos", municipios);
-
    municipios = JSON.parse(localStorage.getItem("municipios")) || [];
    const button = document.getElementsByClassName('button');
    console.log(button);

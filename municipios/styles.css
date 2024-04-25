@@ -1,3 +1,8 @@
 button{
     margin-left: 50px;
 }
+
+button:hover{
+    transition: 2s ease-in-out;
+    opacity: 0.8;   
+}
