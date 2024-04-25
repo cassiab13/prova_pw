@@ -9,7 +9,9 @@ async function getEstados(){
 
     for(let i=0; i < jsonEstados.length; i++){
         let li = document.createElement('li');
-        li.append(jsonEstados[i].nome);
+        let a = document.createElement('a');
+        li.append(a);
+        a.append(jsonEstados[i].nome);
         ul.appendChild(li)
     }
      
